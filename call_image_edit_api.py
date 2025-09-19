@@ -49,7 +49,8 @@ def main():
     # 准备请求参数
     request_data = {
         "image": "https://gitee.com/realhugh/imgs/raw/master/qwen_edit8.png",
-        "prompt": "将图中红色框中的文字改为'殇',只改变框内的画面，框外的画面维持不变"
+        "prompt": "将图中红色框中的文字改为'殇',只改变框内的画面，框外的画面维持不变",
+        "num_inference_steps": "12"
     }
     
     print(f"\n请求地址: {API_ENDPOINT}")
