@@ -40,7 +40,7 @@ def edit_image():
         
         fields = [
             ("prompt", prompt),
-            ("num_inference_steps", "35"),
+            ("num_inference_steps", "8"),
             ("cfg_scale", "8"),
             ("image", image_path),
             ("model", "Qwen-Image-Edit"),
