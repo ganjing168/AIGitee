@@ -26,6 +26,7 @@ def edit_image():
         data = request.get_json()
         prompt = data.get('prompt')
         image_path = data.get('image')
+        num_inference_steps = data.get('num_inference_steps')
         
         if not prompt or not image_path:
             return jsonify({'error': 'Prompt and image are required'}), 400
@@ -40,7 +41,7 @@ def edit_image():
         
         fields = [
             ("prompt", prompt),
-            ("num_inference_steps", "8"),
+            ("num_inference_steps", num_inference_steps),
             ("cfg_scale", "8"),
             ("image", image_path),
             ("model", "Qwen-Image-Edit"),
